@@ -53,13 +53,13 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "product is not valid without a unique title" do
-    product = Product.new(title:  products(:ruby).title,
-                          description: "yyy",
-                          price:  1,
-                          image_url:  "fred.gif")
+    product = Product.new(een taken", product.errors[:title].join('; ')
+  endtitle:  products(:ruby).title,
+        description: "yyy",
+        price:  1,
+        image_url:  "fred.gif")
     assert !product.save
-    assert_equal "has already been taken", product.errors[:title].join('; ')
-  end
+    assert_equal "has already b
 
   test "product is not valid without a unique title - i18n" do
     product = Product.new(title:	products(:ruby).title,
